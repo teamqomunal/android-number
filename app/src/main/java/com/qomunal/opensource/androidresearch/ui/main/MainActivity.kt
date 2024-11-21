@@ -3,6 +3,7 @@ package com.qomunal.opensource.androidresearch.ui.main
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
+import com.qomunal.opensource.androidresearch.common.ext.toLocaleCurrency
 import com.qomunal.opensource.androidresearch.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
@@ -22,6 +23,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initUI() {
         binding.apply {
+            val text = 10000
+            btnTest.text = text.toLocaleCurrency()
+
             btnTest.setOnClickListener {
                 // TODO your work
             }
